@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        body.dark-mode nav{
+          box-shadow: 0 10px 5px #d51b21;          
+          color: #fff;
+
+        }
+        body.light-mode {
+            background-color: #f5f5f5;
+            color: #000;
+        }
+
+body{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+	font-family: "Permanent Marker", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+.slider-holder{
+	width: 800px;
+	height: 400px;
+	background-color: yellow;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	text-align: center;
+	margin-bottom: 50px;
+	box-shadow: 0 5px 5px #000000;          
+
+}
+
+
+
+.image-holder{
+	width: 2400px;
+	height: 400px;
+	clear: both;
+	position: relative;
+	transition: left 2s;
+}
+.slider-image{
+	height: 400px;
+	width: 800px;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+
+}
+
+.button-holder{
+	position: relative;
+	top: -20px;
+
+}
+.slider-change{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: white;
+
+}
+
+#slider-image-1:target ~ .image-holder{
+		left: 0px;
+}
+
+#slider-image-2:target ~ .image-holder{
+		left: -800px;
+}
+
+#slider-image-3:target ~ .image-holder{
+		left:-1600px;
+}
+
+.box{
+	border:2px dashed orange;
+	background-color: #FFE5B4;
+	border-radius: 10px;
+	padding: 15px;
+	margin: 15px;
+
+}
+/* The switch - the box around the slider */
+#theme-toggle-button {
+	font-size: 17px;
+	position: relative;
+	display: inline-block;
+	width: 7em;
+	cursor: pointer;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked + svg #container {
+	fill: #2b4360;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked + svg #button {
+	transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+	opacity: 1;
+  }
+  
+  #toggle:checked + svg #sun {
+	opacity: 0;
+  }
+  
+  #moon {
+	opacity: 0;
+  }
+  
+  #toggle:checked + svg #moon {
+	opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+	opacity: 1;
+  }
+  @media only screen and (max-width: 600px) {
+    /* Styles for devices with screen width up to 600px (e.g., smartphones) */
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for devices with screen width between 601px and 1024px (e.g., tablets) */
+}
+
+  #toggle:checked + svg #cloud {
+	opacity: 0;
+  }
+  
+  #stars {
+	opacity: 0;
+  }
+  
+  #toggle:checked + svg #stars {
+	opacity: 1;
+  }
+  .row{
+	display: flex;
+
+	align-items:center ;
+	height: 500px;
+	border-radius: 10px;
+	border: 3px black solid;
+
+
+}
+.col-3{
+	
+	min-width: 250px;
+	margin-bottom: 30px;
+	padding: 10px;
+    margin: 40px;
+
+	
+
+
+}
+
+.col-3 img{
+	width: 60%;
+
+  
+}
+  .buttons{
+	flex-direction: column;
+	width: 100px;
+	height: 100px;
+	padding: 100px;
+	margin: 100px;
+  }
+mark{
+	font-size: 50px;
+  }
+  #yaya{
+	border: none;
+	background-color: transparent;
+	font-family: "Permanent Marker", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('your-background-image.jpg');
+  background-size: cover;
+}
+
+nav {
+  background-color: white;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 5px black;
+}
+
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  margin:-100px;
+  margin-bottom:-60px;
+
+  background-size: 10px;
+
+}
+
+section {  
+  padding: 60px 20px;
+  color: #333;
+  margin-top: 60px;
+}
+
+  
+  .main {
+    margin-left: 200px;
+    padding: 20px;
+  }
+ .About{
+  text-align: center;
+  padding: 30px;
+ } 
+ #dark-logo {
+  display: none;
+}
+
+   
+    </style>
+    <title>Document</title>
+</head>
+
+<body class="light-mode">
+  <nav>
+    <div>
+      <img src="img/doa-removebg-preview.png" alt="Light Logo" class="logo" id="light-logo">
+      <img src="img/Untitled-removebg-preview (1).png" alt="Dark Logo" class="logo" id="dark-logo">
+      
+    </div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#ahmed">About</a>
+        <button onclick="openContactWindow()" id="yaya">contact</button>
+       
+       
+        <a href="BotBard.html">Get job</a>
+
+    </div>
+    
+</nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="slider-holder">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+        <span id="slider-image-4"></span>
+
+        <div class="image-holder">
+            <img src="img/pro1.png" alt="pic 1" class="slider-image">
+            <img src="img/pro2.png" alt="pic 2" class="slider-image">
+            <img src="img/" alt="pic 3" class="slider-image">
+        </div>
+        <div class="button-holder">
+            <a href="#slider-image-1" class="slider-change"></a>
+            <a href="#slider-image-2" class="slider-change"></a>
+        </div>
+    </div>
+
+
+<div class="About">
+    <mark id="ahmed">About us</mark>
+    <p>
+      Welcome to Ore Co, Your Gateway to Exceptional Online Presence!
+
+      At Ore Co, we specialize in turning digital aspirations into captivating realities. As a dedicated team of web design and development experts, we take pride in elevating the online presence of businesses across diverse industries.    
+    </p>
+    <mark>Our Mission</mark>
+    <p>"Empowering Businesses, Elevating Online Excellence."
+
+      Ore Co is on a mission to empower businesses through transformative digital solutions. We strive to elevate online excellence by seamlessly blending creativity, functionality, and cutting-edge technology.</p>
+      <mark>Why Choose Ore Co?</mark>
+      <p>1. Web Design Mastery:
+        Ore Co is not just a web design agency; we are architects of digital experiences. Our team of talented designers crafts visually stunning websites that captivate audiences and leave lasting impressions.
+        
+        2. Development Prowess:
+        Behind every great website is solid development. Ore Co brings technical expertise to the forefront, ensuring that your website not only looks amazing but functions flawlessly across devices.
+        
+        3. Tailored Solutions:
+        One size does not fit all. Ore Co understands the unique needs of every business. We take a personalized approach to crafting websites that align with your brand identity, goals, and target audience.
+        
+        Core Values
+        1. Dedication to Excellence:
+        Ore Co is committed to delivering websites of the highest quality. We continuously raise the bar to ensure that our clients' digital presence stands out in a competitive online landscape.
+        
+        2. Client-Centric Focus:
+        Your success is our priority. We work collaboratively with our clients, understanding their vision and goals to create websites that not only meet but exceed expectations.
+        
+        3. Innovation as Standard:
+        The digital landscape is ever-evolving, and so are we. Ore Co embraces innovation, implementing the latest technologies and trends to keep your website at the forefront of the online experience.
+        
+        Join Us in Shaping Digital Success
+        Whether you're a business looking to enhance your online presence or a professional seeking a dynamic team to bring your vision to life, Ore Co welcomes you to join us in shaping digital success.
+        
+        Thank you for considering Ore Co as your partner in the journey to digital excellence.</p>
+</div>
+
+<div class="row" id="imgs">
+  <h1>OUR PROJECTS</h1>
+    <div class="col-3">
+        <img src="img/pro1.png">
+  
+    </div>
+    <div class="col-3">
+        <img src="img/pro2.png">
+  
+    </div>
+    <div class="col-3">
+        <img src="img/pro3.PNG">
+  
+    </div>
+<div class="button">
+  <a href="projects/Apple and samsung shop/index.html">
+    <button>Project 1</button>
+  </a>
+  <a href="projects/crazy racing game html5/index.html">
+    <button>Project 2</button>
+  
+  </a>
+  <a href="projects/Facebook/index.html">
+    <button>Project 3</button>
+  
+  </a>
+  <a href="projects/My shop/index.html">
+    <button>Project 4 </button>
+  
+  </a>
+</div>
+
+  </div>
+  
+  <script >function toggleTheme() {
+    var body = document.body;
+    var checkbox = document.getElementById('toggle');
+    var lightLogo = document.getElementById('lightLogo');
+    var darkLogo = document.getElementById('darkLogo');
+
+    if (checkbox.checked) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        lightLogo.style.display = 'block';
+        darkLogo.style.display = 'none';
+       
+        
+    } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+       
+        lightLogo.style.display = 'none';
+        darkLogo.style.display = 'block';
+    }
+} </script>
+  <center><label id="theme-toggle-button">
+    <input type="checkbox" id="toggle" onchange="toggleTheme()">
+    <svg viewBox="0 0 69.667 44" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(3.5 3.5)" data-name="Component 15 – 1" id="Component_15_1">
+
+
+            <g filter="url(#container)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
+              <rect fill="#83cbd8" transform="translate(3.5 3.5)" rx="17.5" height="35" width="60.667" data-name="container" id="container"></rect>
+            </g>
+            
+            <g transform="translate(2.333 2.333)" id="button">
+              
+              <g data-name="sun" id="sun">
+                <g filter="url(#sun-outer)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
+                  <circle fill="#f8e664" transform="translate(5.83 5.83)" r="15.167" cy="15.167" cx="15.167" data-name="sun-outer" id="sun-outer-2"></circle>
+                </g>
+                <g filter="url(#sun)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
+                  <path fill="rgba(246,254,247,0.29)" transform="translate(9.33 9.33)" d="M11.667,0A11.667,11.667,0,1,1,0,11.667,11.667,11.667,0,0,1,11.667,0Z" data-name="sun" id="sun-3"></path>
+                </g>
+                <circle fill="#fcf4b9" transform="translate(8.167 8.167)" r="7" cy="7" cx="7" id="sun-inner"></circle>
+              </g>
+              
+                
+              <g data-name="moon" id="moon">
+                <g filter="url(#moon)" transform="matrix(1, 0, 0, 1, -31.5, -5.83)">
+                  <circle fill="#cce6ee" transform="translate(31.5 5.83)" r="15.167" cy="15.167" cx="15.167" data-name="moon" id="moon-3"></circle>
+                </g>
+                <g fill="#a6cad0" transform="translate(-24.415 -1.009)" id="patches">
+                  <circle transform="translate(43.009 4.496)" r="2" cy="2" cx="2"></circle>
+                  <circle transform="translate(39.366 17.952)" r="2" cy="2" cx="2" data-name="patch"></circle>
+                  <circle transform="translate(33.016 8.044)" r="1" cy="1" cx="1" data-name="patch"></circle>
+                  <circle transform="translate(51.081 18.888)" r="1" cy="1" cx="1" data-name="patch"></circle>
+                  <circle transform="translate(33.016 22.503)" r="1" cy="1" cx="1" data-name="patch"></circle>
+                  <circle transform="translate(50.081 10.53)" r="1.5" cy="1.5" cx="1.5" data-name="patch"></circle>
+                </g>
+              </g>
+            </g>
+            
+            
+            <g filter="url(#cloud)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
+              <path fill="#fff" transform="translate(-3466.47 -160.94)" d="M3512.81,173.815a4.463,4.463,0,0,1,2.243.62.95.95,0,0,1,.72-1.281,4.852,4.852,0,0,1,2.623.519c.034.02-.5-1.968.281-2.716a2.117,2.117,0,0,1,2.829-.274,1.821,1.821,0,0,1,.854,1.858c.063.037,2.594-.049,3.285,1.273s-.865,2.544-.807,2.626a12.192,12.192,0,0,1,2.278.892c.553.448,1.106,1.992-1.62,2.927a7.742,7.742,0,0,1-3.762-.3c-1.28-.49-1.181-2.65-1.137-2.624s-1.417,2.2-2.623,2.2a4.172,4.172,0,0,1-2.394-1.206,3.825,3.825,0,0,1-2.771.774c-3.429-.46-2.333-3.267-2.2-3.55A3.721,3.721,0,0,1,3512.81,173.815Z" data-name="cloud" id="cloud"></path>
+            </g>
+      
+            
+            <g fill="#def8ff" transform="translate(3.585 1.325)" id="stars">
+              <path transform="matrix(-1, 0.017, -0.017, -1, 24.231, 3.055)" d="M.774,0,.566.559,0,.539.458.933.25,1.492l.485-.361.458.394L1.024.953,1.509.592.943.572Z"></path>
+              <path transform="matrix(-0.777, 0.629, -0.629, -0.777, 23.185, 12.358)" d="M1.341.529.836.472.736,0,.505.46,0,.4.4.729l-.231.46L.605.932l.4.326L.9.786Z" data-name="star"></path>
+              <path transform="matrix(0.438, 0.899, -0.899, 0.438, 23.177, 29.735)" d="M.015,1.065.475.9l.285.365L.766.772l.46-.164L.745.494.751,0,.481.407,0,.293.285.658Z" data-name="star"></path>
+              <path transform="translate(12.677 0.388) rotate(104)" d="M1.161,1.6,1.059,1,1.574.722.962.607.86,0,.613.572,0,.457.446.881.2,1.454l.516-.274Z" data-name="star"></path>
+              <path transform="matrix(-0.07, 0.998, -0.998, -0.07, 11.066, 15.457)" d="M.873,1.648l.114-.62L1.579.945,1.03.62,1.144,0,.706.464.157.139.438.7,0,1.167l.592-.083Z" data-name="star"></path>
+              <path transform="translate(8.326 28.061) rotate(11)" d="M.593,0,.638.724,0,.982l.7.211.045.724.36-.64.7.211L1.342.935,1.7.294,1.063.552Z" data-name="star"></path>
+              <path transform="translate(5.012 5.962) rotate(172)" d="M.816,0,.5.455,0,.311.323.767l-.312.455.516-.215.323.456L.827.911,1.343.7.839.552Z" data-name="star"></path>
+              <path transform="translate(2.218 14.616) rotate(169)" d="M1.261,0,.774.571.114.3.487.967,0,1.538.728,1.32l.372.662.047-.749.728-.218L1.215.749Z" data-name="star"></path></center>
+    </svg>
+</label>
+
+
+
+<script>
+ function openContactWindow() {
+    // Email
+    var email = 'ahmedmohamede843@gmail.com';
+    // Phone number for WhatsApp
+    var phone = '+2001020585484';
+
+    // Construct Gmail URL
+    var gmailURL = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(email);
+
+    // Create a new window
+    var contactWindow = window.open('', '_blank', 'width=400,height=200');
+
+    // Write content to the new window
+    contactWindow.document.write('<html><head><title>Contact Information</title></head><body>');
+    contactWindow.document.write('<h1>Contact Information</h1>');
+    contactWindow.document.write('<p>Email: <a href="' + gmailURL + '">' + email + '</a></p>');
+    contactWindow.document.write('<p>Phone: <a href="https://api.whatsapp.com/send/?phone=' + phone + '">' + phone + '</a></p>');
+    contactWindow.document.write('</body></html>');
+
+    // Close the document stream
+    contactWindow.document.close();
+}
+
+
+</script>
+
+</body>
+
+</html>
